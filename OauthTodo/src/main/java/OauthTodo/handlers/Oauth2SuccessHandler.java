@@ -49,10 +49,6 @@ public class Oauth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
 
         String accessToken = jwtService.createAccessToken(user);
 
-        String redirectUrl = String.format("http://localhost:5000/api/auth/oauth-success?token=%s", accessToken);
-//        log.info(redirectUrl);
-        getRedirectStrategy().sendRedirect(request,response,redirectUrl);
-
 
 
 
